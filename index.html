@@ -1,357 +1,379 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ErectogenX | Male Performance Supplement</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Secaps Black Chá - Emagrecimento Natural e Eficaz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-color: #2a9d8f;
+            --secondary-color: #1d3557;
+            --accent-color: #a8dadc;
         }
         
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            text-align: center;
-            line-height: 1.6;
+        .bg-primary-custom {
+            background-color: var(--primary-color);
         }
         
-        .header {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            padding: 50px 20px;
+        .text-primary-custom {
+            color: var(--primary-color);
+        }
+        
+        .border-primary-custom {
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
             color: white;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 3px solid #d10000;
         }
         
-        .header::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 10px;
-            background: linear-gradient(90deg, #d10000, #0a0a0a, #d10000);
+        .btn-primary-custom:hover {
+            background-color: #238277;
+            border-color: #238277;
         }
         
-        .product-name {
-            font-size: 3.5rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, #ffffff, #d10000);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            font-weight: 400;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #cccccc;
-        }
-        
-        .product-section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .product-image {
-            max-width: 400px;
-            width: 100%;
-            margin-bottom: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(209, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .product-image:hover {
-            transform: scale(1.02);
-        }
-        
-        .benefits-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin: 40px 0;
+        .hero-section {
+            background: linear-gradient(rgba(42, 157, 143, 0.9), rgba(29, 53, 87, 0.9)), url('https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
         }
         
         .benefit-card {
-            background: #1a1a1a;
+            transition: transform 0.3s;
             border-radius: 10px;
-            padding: 25px 15px;
-            width: 280px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #333333;
+            overflow: hidden;
         }
         
         .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(209, 0, 0, 0.3);
-            border-color: #d10000;
-        }
-        
-        .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #d10000;
-        }
-        
-        .benefit-title {
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: linear-gradient(to right, #d10000, #ff3333);
-            color: white;
-            padding: 18px 45px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(209, 0, 0, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 30px 0;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background: linear-gradient(to right, #b30000, #e60000);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(209, 0, 0, 0.6);
-        }
-        
-        .features {
-            background-color: #1a1a1a;
-            padding: 50px 20px;
-            border-radius: 15px;
-            margin: 40px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            border: 1px solid #333333;
-        }
-        
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: #ffffff;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #d10000;
-        }
-        
-        .ingredients-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            transform: translateY(-10px);
         }
         
         .ingredient-card {
-            background: #0a0a0a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-img {
             border-radius: 10px;
-            padding: 20px;
-            text-align: left;
-            border: 1px solid #333333;
-            transition: all 0.3s ease;
-        }
-        
-        .ingredient-card:hover {
-            border-color: #d10000;
-            transform: translateY(-5px);
-        }
-        
-        .ingredient-name {
-            font-weight: 700;
-            color: #d10000;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-        
-        .safety-info {
-            background-color: #1a1a1a;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 40px 0;
-            text-align: left;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            border-left: 5px solid #d10000;
-        }
-        
-        .safety-title {
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-        }
-        
-        .warning-icon {
-            margin-right: 10px;
-            font-size: 1.5rem;
-            color: #d10000;
-        }
-        
-        .certifications {
-            max-width: 800px;
-            width: 100%;
-            margin: 40px auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        
-        .footer {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            padding: 30px 20px;
-            margin-top: 60px;
-            color: #cccccc;
-            font-size: 0.9rem;
-            border-top: 3px solid #d10000;
-        }
-        
-        .disclaimer {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 0.8rem;
-            opacity: 0.8;
-            margin-top: 15px;
-        }
-        
-        @media (max-width: 768px) {
-            .product-name {
-                font-size: 2.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            .benefit-card {
-                width: 100%;
-                max-width: 350px;
-            }
-            
-            .ingredients-container {
-                grid-template-columns: 1fr;
-            }
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1 class="product-name">ErectogenX</h1>
-        <p class="tagline">Premium Male Performance Supplement - Boost Libido, Potency & Stamina</p>
-    </div>
-    
-    <div class="product-section">
-        <img src="ErectogenX.png" alt="ErectogenX Supplement" class="product-image">
-        
-        <a href="https://www.checkout-ds24.com/redir/637523/jonathan2026/" class="btn">Go to Official Website</a>
-        
-        <div class="benefits-container">
-            <div class="benefit-card">
-                <div class="benefit-icon">⚡</div>
-                <h3 class="benefit-title">Enhanced Erection Quality</h3>
-                <p>Improve erection firmness and duration for better sexual performance</p>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">🔥</div>
-                <h3 class="benefit-title">Increased Libido</h3>
-                <p>Boost sexual desire and drive with natural ingredients</p>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">💪</div>
-                <h3 class="benefit-title">More Energy & Stamina</h3>
-                <p>Experience heightened physical energy and endurance</p>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon">🛡️</div>
-                <h3 class="benefit-title">Overall Male Wellness</h3>
-                <p>Support your daily health and vitality with targeted nutrients</p>
-            </div>
-        </div>
-        
-        <div class="features">
-            <h2 class="section-title">Powerful Natural Formula</h2>
-            <p>ErectogenX combines scientifically-backed ingredients to support male sexual health and performance</p>
-            
-            <div class="ingredients-container">
-                <div class="ingredient-card">
-                    <h3 class="ingredient-name">Tongkat Ali Extract</h3>
-                    <p>Known as "Longjack," this herb is traditionally used to boost testosterone levels and improve male fertility.</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Transforme seu corpo com o poder da natureza</h1>
+                    <p class="lead mb-4">Secaps Black Chá: a solução 100% natural para emagrecimento, detox e bem-estar</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Redução de peso e medidas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Melhora do trânsito intestinal</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Ação detox e antioxidante</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Controle da vontade de comer doces</li>
+                    </ul>
+                    <a href="#cta" class="btn btn-warning btn-lg px-5 py-3 fw-bold">QUERO EMAGRECER COM SAÚDE</a>
                 </div>
-                
-                <div class="ingredient-card">
-                    <h3 class="ingredient-name">Horny Goat Weed</h3>
-                    <p>Contains icariin, which may help improve blood flow and support erectile function.</p>
-                </div>
-                
-                <div class="ingredient-card">
-                    <h3 class="ingredient-name">L-Lysine HCL</h3>
-                    <p>An essential amino acid that supports protein synthesis and overall health.</p>
-                </div>
-                
-                <div class="ingredient-card">
-                    <h3 class="ingredient-name">Apple Cider Vinegar</h3>
-                    <p>Provides various health benefits and may support weight management.</p>
-                </div>
-                
-                <div class="ingredient-card">
-                    <h3 class="ingredient-name">Garcinia Cambogia</h3>
-                    <p>Contains hydroxycitric acid (HCA) which may help suppress appetite.</p>
-                </div>
-                
-                <div class="ingredient-card">
-                    <h3 class="ingredient-name">Cinnamon Extract</h3>
-                    <p>May help support healthy blood sugar levels and provide antioxidant benefits.</p>
+                <div class="col-lg-6 text-center">
+                    <img src="secaps-black-cha2.webp" alt="Secaps Black Chá" class="img-fluid rounded shadow-lg">
                 </div>
             </div>
         </div>
-        
-        <div class="safety-info">
-            <h3 class="safety-title"><span class="warning-icon">⚠️</span> Important Safety Information</h3>
-            <p>ErectogenX is a dietary supplement. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare professional before using this product, especially if you have any pre-existing medical conditions or are taking medication. Do not exceed the recommended dosage. Keep out of reach of children.</p>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-custom">Benefícios do Secaps Black Chá</h2>
+                <p class="lead">Descubra como nosso produto pode transformar sua saúde e sua autoestima</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card bg-white p-4 h-100 shadow-sm">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-weight text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Redução de Peso e Medidas</h4>
+                        <p class="text-center">Auxilia na queima de gordura localizada, especialmente na barriga, pernas e braços.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card bg-white p-4 h-100 shadow-sm">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-heartbeat text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Funcionamento Intestinal</h4>
+                        <p class="text-center">Melhora o trânsito intestinal e combate a retenção de líquidos e inchaço.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card bg-white p-4 h-100 shadow-sm">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-leaf text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Ação Detox</h4>
+                        <p class="text-center">Elimina toxinas do organismo, promovendo uma limpeza interna completa.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card bg-white p-4 h-100 shadow-sm">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-cookie-bite text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Controle de Doces</h4>
+                        <p class="text-center">Diminui a vontade de comer doces e equilibra os níveis de glicemia.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card bg-white p-4 h-100 shadow-sm">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-battery-full text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Mais Disposição</h4>
+                        <p class="text-center">Proporciona sensação de leveza e aumenta a energia para o dia a dia.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card bg-white p-4 h-100 shadow-sm">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-shield-alt text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Ação Antioxidante</h4>
+                        <p class="text-center">Combate os radicais livres, retardando o envelhecimento celular.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <img src="guarantee-seal.webp" alt="ErectogenX Certifications" class="certifications">
-        
-        <a href="https://www.checkout-ds24.com/redir/637523/jonathan2026/" class="btn">Go to Official Website</a>
-    </div>
-    
-    <div class="footer">
-        <p>© 2023 ErectogenX. All rights reserved.</p>
-        <p class="disclaimer">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary.</p>
-    </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-custom">Composição 100% Natural</h2>
+                <p class="lead">Ingredientes selecionados para potencializar seus resultados</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="ingredient-card bg-white p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-seedling text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Psyllium</h4>
+                        <p class="text-center">Promove saciedade e melhora o funcionamento intestinal, auxiliando no processo de emagrecimento.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="ingredient-card bg-white p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-flower text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Hibisco</h4>
+                        <p class="text-center">Conhecido por seu efeito diurético, ajuda a desinchar e combater a retenção de líquidos.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="ingredient-card bg-white p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-spa text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Cúrcuma</h4>
+                        <p class="text-center">Possui propriedades anti-inflamatórias e antioxidantes, contribuindo para o bem-estar geral.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="ingredient-card bg-white p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-filter text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Inulina</h4>
+                        <p class="text-center">Fibra solúvel que auxilia na saúde intestinal e promove a sensação de saciedade.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="ingredient-card bg-white p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-apple-alt text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Picolinato de Cromo</h4>
+                        <p class="text-center">Ajuda a regular os níveis de açúcar no sangue e diminui a compulsão alimentar por doces.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="ingredient-card bg-white p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-certificate text-primary-custom fa-2x"></i>
+                        </div>
+                        <h4 class="text-center mb-3">100% Natural</h4>
+                        <p class="text-center">Fórmula livre de conservantes artificiais, corantes e substâncias sintéticas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold text-primary-custom mb-4">Como Usar o Secaps Black Chá</h2>
+                    <p class="mb-4">A praticidade que você precisa para incluir na sua rotina:</p>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-check-circle text-primary-custom fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0">Misture 1 dosador (5g) do pó solúvel em 200ml de água</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-check-circle text-primary-custom fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0">Pode ser preparado com água gelada, com gás ou em temperatura ambiente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-check-circle text-primary-custom fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0">Consuma preferencialmente pela manhã em jejum ou 30 minutos antes das refeições</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-warning mt-4">
+                        <h5 class="alert-heading">Importante</h5>
+                        <p class="mb-0">Para melhores resultados, alie o consumo do chá a uma alimentação equilibrada e à prática regular de atividades físicas.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 text-center">
+                    <img src="secaps-black perfil.webp" alt="Preparação do Secaps Black Chá" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-custom">Resultados Reais</h2>
+                <p class="lead">Veja a transformação de quem já experimentou o Secaps Black Chá</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="testimonial-img">
+                        <img src="secaps black1.jpg" alt="Resultado 1 - Antes e Depois" class="img-fluid w-100">
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h5 class="fw-bold">Marcos Silva</h5>
+                        <p class="mb-0">"Perdi alguns kilos em 2 meses com o Secaps Black Chá. Minha disposição aumentou muito e não sinto mais aquela vontade incontrolável de comer doces!"</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="testimonial-img">
+                        <img src="secaps black 3.jpg" alt="Resultado 2 - Antes e Depois" class="img-fluid w-100">
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h5 class="fw-bold">Ana Rodrigues</h5>
+                        <p class="mb-0">"O inchaço sumiu completamente! Me sinto mais leve, minha pele melhorou e finalmente consegui reduzir as medidas da barriga que tanto me incomodavam."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-5 bg-primary-custom text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3">Pronto para transformar sua saúde e sua autoestima?</h2>
+                    <p class="lead mb-4">Não espere mais para começar sua jornada de emagrecimento saudável. O Secaps Black Chá é a solução natural que você procurava!</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Fórmula 100% natural</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Resultados comprovados</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Prático de preparar</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Sem efeitos colaterais</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Entrega para todo Brasil</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Garantia de satisfação</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 text-center">
+                    <div class="bg-white text-dark p-4 rounded shadow-lg">
+                        <h4 class="fw-bold text-primary-custom mb-3">Garanta o Seu Agora!</h4>
+                        <p class="mb-3">Aproveite nossa oferta especial por tempo limitado</p>
+                        <a href="https://www.siteoficial.com" class="btn btn-primary-custom btn-lg w-100 py-3 fw-bold">COMPRAR AGORA</a>
+                        <p class="small mt-2 mb-0">Pagamento seguro • Entrega rápida • Garantia de 30 dias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">Secaps Black Chá - Suplemento Alimentar</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">© 2023 Secaps Black Chá. Todos os direitos reservados.</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <p class="small mb-0"><strong>Aviso:</strong> Este produto não é um medicamento. Não exceder a recomendação diária de consumo. Mantenha fora do alcance de crianças. Gestantes, nutrizes (lactantes) e crianças devem consumir somente sob orientação médica ou de nutricionista. Os resultados podem variar de pessoa para pessoa.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
